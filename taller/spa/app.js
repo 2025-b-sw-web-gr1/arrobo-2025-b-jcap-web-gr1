@@ -185,7 +185,9 @@ const temasHtml = [
 
 // TODO: Integrar contenido adicional proporcionado por el docente en futuras sesiones.
 
+// Esperamos a que el DOM esté listo antes de manipular elementos.
 document.addEventListener("DOMContentLoaded", () => {
+  // Referencias principales para controlar el escudo EPN en modo SPA.
   const botonDemostracion = document.getElementById("demo-spa");
   const estadoSpa = document.getElementById("spa-status");
   const cuerpoDestacado = document.getElementById("spa-highlight");
@@ -193,6 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (botonDemostracion && cuerpoDestacado) {
     // Simula la experiencia sin recarga mostrando/ocultando el escudo desde el cliente.
     botonDemostracion.addEventListener("click", () => {
+      // Alternamos la visibilidad del escudo y sincronizamos atributos accesibles.
       const visible = cuerpoDestacado.classList.toggle("is-visible");
       cuerpoDestacado.hidden = !visible;
       botonDemostracion.setAttribute("aria-expanded", visible ? "true" : "false");
@@ -200,6 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (estadoSpa) {
         if (visible) {
+          // Mostramos una marca de tiempo para resaltar la interacción sin recarga.
           const hora = new Date().toLocaleTimeString("es-EC", {
             hour: "2-digit",
             minute: "2-digit",
@@ -213,6 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Buscamos el contenedor donde se inyectarán las tarjetas de cada tema.
   const contenedor = document.querySelector("#contenido");
 
   if (!contenedor) {
@@ -222,6 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Recorremos los temas y construimos sus tarjetas directamente en el DOM.
   temasHtml.forEach((tema) => {
+    // Sección general que agrupa el botón y el contenido expandible de un tema.
     const temaSection = document.createElement("section");
     temaSection.className = "theme-card";
     temaSection.setAttribute("id", tema.id);
@@ -260,8 +266,8 @@ document.addEventListener("DOMContentLoaded", () => {
       cuerpoTema.appendChild(referencia);
     }
 
-  // Cada sección del tema se traduce a un artículo con la misma estructura que la referencia.
-  tema.secciones.forEach((seccion) => {
+    // Cada sección del tema se traduce a un artículo con la misma estructura que la referencia.
+    tema.secciones.forEach((seccion) => {
       const articulo = document.createElement("article");
       articulo.className = "card";
 
@@ -323,6 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
     temaSection.appendChild(cuerpoTema);
     contenedor.appendChild(temaSection);
 
+    // Controla la expansión/contracción del cuerpo del tema.
     botonTema.addEventListener("click", () => {
       const visible = cuerpoTema.classList.toggle("is-visible");
       cuerpoTema.setAttribute("aria-hidden", visible ? "false" : "true");
