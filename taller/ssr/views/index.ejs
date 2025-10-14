@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conceptos básicos de HTML - SSR</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="page-ssr">
+  <header class="site-header">
+    <h1>Conceptos básicos de HTML</h1>
+    <p class="tagline">Guía interactiva para comprender la estructura fundamental de la Web.</p>
+  </header>
+  <main class="content">
+  <!-- Bloque demostrativo para diferenciar la experiencia SSR -->
+  <section class="experience-highlight" aria-label="Experiencia SSR">
+      <form method="get" action="/" class="highlight-trigger" aria-live="polite">
+        <input type="hidden" name="mostrar" value="<%= mostrarEscudo ? '0' : '1' %>">
+        <input type="hidden" name="tema" value="<%= temaActivo ? temaActivo : 'none' %>">
+        <button
+          type="submit"
+          class="highlight-button"
+          aria-controls="ssr-highlight"
+          aria-expanded="<%= mostrarEscudo ? 'true' : 'false' %>"
+        >
+          <%= mostrarEscudo ? "Ocultar Escudo EPN" : "Ver Escudo EPN" %>
+        </button>
+      </form>
+      <div
+        id="ssr-highlight"
+        class="highlight-body<%= mostrarEscudo ? ' is-visible' : '' %>"
+        aria-live="polite"
+        <%= mostrarEscudo ? '' : 'hidden' %>
+      >
+        <% if (mostrarEscudo) { %>
+          <h2>Experiencia SSR</h2>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zSmX_TUl8Va3RyzgPw3pXX6STr4J1-Tv67DpB6j3QRECouZpNLWhM7p7l1Voiq294zQ&usqp=CAU"
+            alt="Escudo de la Escuela Politécnica Nacional"
+            class="highlight-image"
+          >
+          <div class="highlight-description">
+            <p>
+              Esta versión SSR genera la vista en el servidor antes de entregarla al navegador.
+              Al solicitar el escudo, Express renderiza nuevamente el contenido para incorporarlo en la respuesta.
+            </p>
+            <p class="highlight-status">El servidor generó esta vista específicamente para incluir el escudo.</p>
+            <p class="highlight-status">Renderizado por última vez: <%= renderTimestamp %></p>
+          </div>
+        <% } %>
+      </div>
+    </section>
+  <!-- Tarjetas de contenido renderizadas desde el servidor -->
+  <% temas.forEach(function(tema) { %>
+      <% const activo = temaActivo === tema.id; const bodyId = 'temario-' + tema.id; %>
+      <section id="<%= tema.id %>" class="theme-card">
+        <form method="get" action="/" class="theme-trigger" aria-live="polite">
+          <input type="hidden" name="mostrar" value="<%= mostrarEscudo ? '1' : '0' %>">
+          <input type="hidden" name="tema" value="<%= activo ? 'none' : tema.id %>">
+          <button
+            type="submit"
+            class="theme-toggle"
+            aria-controls="<%= bodyId %>"
+            aria-expanded="<%= activo ? 'true' : 'false' %>"
+          >
+            <%= activo ? 'Ocultar: ' + tema.titulo : 'Ver: ' + tema.titulo %>
+          </button>
+        </form>
+        <div
+          id="<%= bodyId %>"
+          class="theme-body<%= activo ? ' is-visible' : '' %>"
+          aria-hidden="<%= activo ? 'false' : 'true' %>"
+          <%= activo ? '' : 'hidden' %>
+        >
+          <% if (tema.resumen) { %>
+            <p class="theme-summary"><%= tema.resumen %></p>
+          <% } %>
+
+          <% if (tema.enlace) { %>
+            <p class="theme-source">
+              Referencia:
+              <a href="<%= tema.enlace %>" target="_blank" rel="noopener">
+                <%= tema.enlaceTexto || tema.enlace %>
+              </a>
+            </p>
+          <% } %>
+
+          <% tema.secciones.forEach(function(seccion) { %>
+            <article class="card" id="<%= seccion.id %>">
+              <% if (seccion.titulo) { %>
+                <h3><%= seccion.titulo %></h3>
+              <% } %>
+
+              <% if (Array.isArray(seccion.descripcion)) { %>
+                <% seccion.descripcion.forEach(function(parrafo) { %>
+                  <p><%= parrafo %></p>
+                <% }); %>
+              <% } %>
+
+              <% if (Array.isArray(seccion.lista) && seccion.lista.length > 0) { %>
+                <ul>
+                  <% seccion.lista.forEach(function(item) { %>
+                    <li><%= item %></li>
+                  <% }); %>
+                </ul>
+              <% } %>
+
+              <% if (seccion.nota) { %>
+                <blockquote><%= seccion.nota %></blockquote>
+              <% } %>
+
+              <% if (seccion.ejemploCodigo) { %>
+                <div class="code-wrapper">
+                  <code><%= seccion.ejemploCodigo.trim() %></code>
+                </div>
+              <% } %>
+
+              <% if (seccion.ejemploDescripcion) { %>
+                <p class="section-meta"><%= seccion.ejemploDescripcion %></p>
+              <% } %>
+
+              <% if (seccion.ejemploRender) { %>
+                <div class="example-preview">
+                  <%- seccion.ejemploRender %>
+                </div>
+              <% } %>
+            </article>
+          <% }); %>
+        </div>
+      </section>
+    <% }); %>
+  </main>
+  <footer class="site-footer">
+    <p>Material educativo preparado para fines académicos. TODO: ESCUELA POLITECNICA NACIONAL.</p>
+  </footer>
+</body>
+</html>

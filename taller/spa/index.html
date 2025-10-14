@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conceptos básicos de HTML - SPA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-spa">
+  <header class="site-header">
+    <h1>Conceptos básicos de HTML</h1>
+    <p class="tagline">Guía interactiva para comprender la estructura fundamental de la Web.</p>
+  </header>
+  <main class="content">
+    <section class="experience-highlight" aria-label="Experiencia SPA">
+      <button
+        id="demo-spa"
+        type="button"
+        class="highlight-button"
+        aria-controls="spa-highlight"
+        aria-expanded="false"
+      >
+        Ver Escudo EPN
+      </button>
+      <div id="spa-highlight" class="highlight-body" hidden aria-live="polite">
+        <h2>Experiencia SPA</h2>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3zSmX_TUl8Va3RyzgPw3pXX6STr4J1-Tv67DpB6j3QRECouZpNLWhM7p7l1Voiq294zQ&usqp=CAU"
+          alt="Escudo de la Escuela Politécnica Nacional"
+          class="highlight-image"
+        >
+        <div class="highlight-description">
+          <p>
+            Esta versión SPA actualiza la interfaz con JavaScript, sin pedir al servidor la página completa.
+            Al desplegar el escudo se demuestra cómo la experiencia permanece en el cliente.
+          </p>
+          <p id="spa-status" class="highlight-status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  <section id="contenido" class="content-sections"></section>
+  </main>
+  <footer class="site-footer">
+    <p>Material educativo preparado para fines académicos. TODO: ESCUELA POLITECNICA NACIONAL.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

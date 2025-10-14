@@ -1,0 +1,13 @@
+{
+  "name": "taller-ssr",
+  "version": "1.0.0",
+  "description": "Sitio educativo SSR sobre conceptos básicos de HTML",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
