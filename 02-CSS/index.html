@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formas de cargar estilos CSS</title>
+  <!-- 3) Hoja externa: se aplica a toda la página -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <p class="eyebrow">CSS · Carga de estilos</p>
+      <h1>Formas de cargar estilos en una página web</h1>
+      <p class="lede">Ejemplos educativos de las distintas técnicas: atributo <code>style</code>, etiqueta <code>&lt;style&gt;</code>, hoja externa, inyección con JavaScript y carga por petición HTTP.</p>
+    </div>
+  </header>
+
+  <main class="wrapper">
+<button class="botonEjmeplo">Ejemplo boton
+
+</button>
+
+    <!-- 1) Inline/atributo style -->
+    <article class="card">
+      <h2>1. Atributo <code>style</code> (inline)</h2>
+      <p>Aplica estilos directamente al elemento. Útil para casos puntuales, pero no recomendado para grandes sitios.</p>
+      <div class="example">
+        <div class="box" style="background:#10b981; color:white; padding:12px; border-radius:8px;">Caja con estilo inline</div>
+        <pre><code>&lt;div style="background:#10b981; color:white; padding:12px; border-radius:8px;"&gt;...&lt;/div&gt;</code></pre>
+      </div>
+    </article>
+
+    <!-- 2) Etiqueta <style> en el documento -->
+    <article class="card">
+      <h2>2. Etiqueta <code>&lt;style&gt;</code> en el documento</h2>
+      <p>Define reglas CSS dentro del HTML. Útil para demos o páginas pequeñas.</p>
+      <style>
+        /* Bloque de demostración local a esta página */
+        .demo-style-tag {
+          background: #3b82f6;
+          color: white;
+          padding: 12px;
+          border-radius: 8px;
+        }
+        .botonEjmeplo {
+          background-color: yellow;
+          
+        }
+        .botonEjmeplo {
+          background-color: blue;
+          
+        }
+        .botonEjmeplo {
+          background-color: red;
+          
+        }
+      </style>
+      <div class="example">
+        <div class="demo-style-tag">Caja estilizada con &lt;style&gt; interno</div>
+        <pre><code>&lt;style&gt;
+.demo-style-tag {
+  background: #3b82f6;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+}
+&lt;/style&gt;</code></pre>
+      </div>
+    </article>
+
+    <!-- 3) Hoja externa <link rel="stylesheet"> ya cargada en <head> -->
+    <article class="card">
+      <h2>3. Hoja externa (archivo CSS)</h2>
+      <p>Separa presentación del contenido. Escalable y recomendado para proyectos reales.</p>
+      <div class="example">
+        <div class="box external">Caja estilizada por style.css</div>
+        <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+      </div>
+    </article>
+
+    <!-- 4) Inyectar CSS con JavaScript (crear <style> dinámico) -->
+    <article class="card">
+      <h2>4. Inyección con JavaScript</h2>
+      <p>Genera reglas al vuelo creando una etiqueta &lt;style&gt; o adjuntando una hoja externa.</p>
+      <div class="example">
+        <button id="btn-inject">Inyectar estilos dinámicos</button>
+        <div id="inject-target" class="box">Caja a estilizar dinámicamente</div>
+        <pre><code>// app.js
+injectStyle(`
+  #inject-target { background:#f59e0b; color:black; padding:12px; border-radius:8px; }
+`);
+</code></pre>
+      </div>
+    </article>
+
+    <!-- 5) Cargar CSS por petición HTTP y aplicarlo -->
+    <article class="card">
+      <h2>5. Cargar por petición HTTP (fetch)</h2>
+      <p>Descarga CSS desde el servidor y lo aplica en tiempo de ejecución.</p>
+      <div class="example">
+        <button id="btn-fetch">Cargar estilos desde servidor</button>
+        <div id="fetch-target" class="box">Caja a estilizar vía fetch</div>
+        <pre><code>// app.js
+fetch('/dynamic.css').then(r =&gt; r.text()).then(css =&gt; injectStyle(css));
+</code></pre>
+      </div>
+    </article>
+
+    <section class="card">
+      <h2>Servidor web local</h2>
+      <p>Usaremos <strong>http-server</strong> para servir estos archivos y poder probar la carga por HTTP.</p>
+      <ol>
+        <li>Opción rápida sin instalar: <code>npx http-server . -p 8080</code></li>
+        <li>Opción con scripts (recomendada):
+          <div>
+            <code>npm install</code> en <strong>02-CSS</strong> y luego <code>npm run start</code>
+          </div>
+        </li>
+        <li>Abre <code>http://localhost:8080</code> en tu navegador.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
