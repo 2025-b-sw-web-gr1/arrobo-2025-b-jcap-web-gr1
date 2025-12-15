@@ -1,0 +1,15 @@
+meta {
+  name: 06-delete-recipe.bru
+  type: http
+  seq: 6
+}
+
+delete {
+  url: http://localhost:3000/recipes/1
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

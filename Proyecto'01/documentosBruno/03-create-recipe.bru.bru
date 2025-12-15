@@ -1,0 +1,29 @@
+meta {
+  name: 03-create-recipe.bru
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/recipes
+  body: json
+  auth: inherit
+}
+
+headers {
+  ~Content-Type: application/json
+}
+
+body:json {
+  {
+          "name": "Tostada",
+          "description": "Pan con mantequilla"
+        }
+  
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

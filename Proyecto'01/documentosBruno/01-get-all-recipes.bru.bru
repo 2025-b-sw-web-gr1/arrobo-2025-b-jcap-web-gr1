@@ -1,0 +1,15 @@
+meta {
+  name: 01-get-all-recipes.bru
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/recipes
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

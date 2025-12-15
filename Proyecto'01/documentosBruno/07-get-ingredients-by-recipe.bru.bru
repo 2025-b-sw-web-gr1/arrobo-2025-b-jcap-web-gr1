@@ -1,0 +1,15 @@
+meta {
+  name: 07-get-ingredients-by-recipe.bru
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://localhost:3000/recipes/1/ingredients
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

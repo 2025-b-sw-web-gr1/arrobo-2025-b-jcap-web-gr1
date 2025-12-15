@@ -1,0 +1,30 @@
+meta {
+  name: 10-create-ingredient.bru
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://localhost:3000/ingredients
+  body: json
+  auth: inherit
+}
+
+headers {
+  ~Content-Type: application/json
+}
+
+body:json {
+   {
+          "name": "Pan",
+          "quantity": 2,
+          "unit": "rebanadas",
+          "recipeId": 1
+        }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

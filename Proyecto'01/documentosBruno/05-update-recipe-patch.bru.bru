@@ -1,0 +1,27 @@
+meta {
+  name: 05-update-recipe-patch.bru
+  type: http
+  seq: 5
+}
+
+patch {
+  url: http://localhost:3000/recipes/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  ~Content-Type: application/json
+}
+
+body:json {
+   {
+          "description": "Actualización parcial con PATCH"
+        }
+    
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

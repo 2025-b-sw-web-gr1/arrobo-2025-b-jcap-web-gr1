@@ -1,0 +1,16 @@
+{
+  "name": "recipes-api",
+  "version": "1.0.0",
+  "description": "Simple RESTful API for recipes and ingredients (in-memory)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
