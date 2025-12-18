@@ -1,0 +1,15 @@
+{
+  "name": "clase-007-handlebars",
+  "version": "1.0.0",
+  "description": "Taller sencillo con Express y Handlebars",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Estudiante",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2"
+  }
+}

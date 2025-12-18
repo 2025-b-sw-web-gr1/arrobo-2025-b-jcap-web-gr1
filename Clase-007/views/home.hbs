@@ -1,0 +1,12 @@
+<section class="card">
+  <h1>{{name}}</h1>
+  <p><strong>Carrera:</strong> {{career}}</p>
+  <p>{{description}}</p>
+
+  <h3>Habilidades</h3>
+  <ul class="skills">
+    {{#each skills}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+</section>

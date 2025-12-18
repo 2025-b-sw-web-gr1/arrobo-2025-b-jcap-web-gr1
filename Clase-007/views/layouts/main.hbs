@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - {{name}}</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    body {
+      margin: 0;
+      background: #f4f6fb;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background: #0f172a;
+      color: #f1f5f9;
+      padding: 18px 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    main {
+      max-width: 900px;
+      margin: 32px auto;
+      padding: 0 18px;
+    }
+    footer {
+      text-align: center;
+      padding: 16px;
+      background: #0f172a;
+      color: #e2e8f0;
+      margin-top: 40px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      border: 1px solid #e2e8f0;
+    }
+    h1 {
+      margin-top: 0;
+      letter-spacing: 0.4px;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+      list-style: none;
+    }
+    .skills li {
+      background: #e0f2fe;
+      color: #075985;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      border: 1px solid #bae6fd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>{{name}}</h2>
+  </header>
+  <main>
+    {{{body}}}
+  </main>
+  <footer>
+    <small>{{footer}}</small>
+  </footer>
+</body>
+</html>
