@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Taller práctico sobre estándares W3C aplicando HTML5 semántico y CSS Grid">
+    <meta name="author" content="Estudiante Ingeniería de Software">
+    <title>Taller W3C - Estándares Web Modernos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado principal de la página -->
+    <header class="main-header">
+        <h1>W3C: Estándares Web Modernos</h1>
+        <p class="subtitle">Explorando las tecnologías que dan forma a la Web</p>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#sobre-w3c">Sobre W3C</a></li>
+            <li><a href="#estandares">Estándares</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <!-- Sección introductoria sobre W3C -->
+        <section id="sobre-w3c" class="intro-section">
+            <h2>¿Qué es el W3C?</h2>
+            <p>
+                El <strong>World Wide Web Consortium (W3C)</strong> es una comunidad internacional 
+                que desarrolla estándares para asegurar el crecimiento a largo plazo de la Web. 
+                Fundado por <em>Tim Berners-Lee</em> en 1994, el W3C trabaja para garantizar que 
+                la Web sea accesible, interoperable y útil para todos.
+            </p>
+            <p>
+                Su misión es llevar la Web a su máximo potencial mediante la creación de protocolos 
+                y directrices que promuevan la evolución tecnológica y la inclusión digital.
+            </p>
+        </section>
+
+        <!-- Sección de estándares principales -->
+        <section id="estandares" class="standards-section">
+            <h2>Estándares W3C Principales</h2>
+            <p class="section-intro">
+                A continuación se presentan algunos de los estándares más importantes desarrollados 
+                por el W3C que todo desarrollador web debe conocer:
+            </p>
+
+            <!-- Grid de tarjetas de estándares -->
+            <div class="standards-grid">
+                <!-- Tarjeta HTML5 -->
+                <article class="standard-card">
+                    <div class="card-header">
+                        <h3>HTML5</h3>
+                        <span class="badge">Lenguaje de Marcado</span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Quinta revisión del lenguaje de marcado HTML. Introduce elementos 
+                            semánticos, APIs modernas y soporte nativo para multimedia.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Elementos semánticos (header, nav, section, article, footer)</li>
+                            <li>Canvas para gráficos 2D</li>
+                            <li>Video y audio nativos</li>
+                            <li>Almacenamiento local</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Tarjeta CSS -->
+                <article class="standard-card">
+                    <div class="card-header">
+                        <h3>CSS3</h3>
+                        <span class="badge">Presentación</span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Hojas de estilo en cascada que controlan la presentación visual. 
+                            CSS3 introduce Grid, Flexbox, animaciones y diseño responsivo.
+                        </p>
+                        <ul class="feature-list">
+                            <li>CSS Grid Layout</li>
+                            <li>Flexbox</li>
+                            <li>Animaciones y transiciones</li>
+                            <li>Media queries</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Tarjeta WCAG -->
+                <article class="standard-card">
+                    <div class="card-header">
+                        <h3>WCAG</h3>
+                        <span class="badge">Accesibilidad</span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Directrices de Accesibilidad para el Contenido Web. Define cómo hacer 
+                            el contenido accesible para personas con discapacidades.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Nivel A: Requisitos básicos</li>
+                            <li>Nivel AA: Estándar recomendado</li>
+                            <li>Nivel AAA: Máxima accesibilidad</li>
+                            <li>Principios POUR</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Tarjeta WAI-ARIA -->
+                <article class="standard-card">
+                    <div class="card-header">
+                        <h3>WAI-ARIA</h3>
+                        <span class="badge">Accesibilidad</span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Define roles, estados y propiedades adicionales para elementos HTML 
+                            que mejoran la accesibilidad en aplicaciones web dinámicas.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Roles (role="navigation")</li>
+                            <li>Propiedades (aria-label)</li>
+                            <li>Estados (aria-expanded)</li>
+                            <li>Live regions</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Tarjeta SVG -->
+                <article class="standard-card">
+                    <div class="card-header">
+                        <h3>SVG</h3>
+                        <span class="badge">Gráficos</span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Formato de gráficos vectoriales basado en XML. Escalable sin pérdida 
+                            de calidad y manipulable con CSS y JavaScript.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Escalabilidad infinita</li>
+                            <li>Interactividad</li>
+                            <li>Animaciones</li>
+                            <li>Bajo peso de archivo</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Tarjeta adicional: Web APIs -->
+                <article class="standard-card">
+                    <div class="card-header">
+                        <h3>Web APIs</h3>
+                        <span class="badge">Funcionalidad</span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Interfaces de programación que permiten interactuar con el navegador 
+                            y el sistema, ampliando las capacidades de las aplicaciones web.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Geolocation API</li>
+                            <li>Web Storage API</li>
+                            <li>Fetch API</li>
+                            <li>Service Workers</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección de beneficios -->
+        <section id="beneficios" class="benefits-section">
+            <h2>Beneficios de Seguir los Estándares W3C</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>🌐 Interoperabilidad</h3>
+                    <p>Las aplicaciones funcionan consistentemente en diferentes navegadores y dispositivos.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>♿ Accesibilidad</h3>
+                    <p>El contenido es accesible para todas las personas, incluyendo aquellas con discapacidades.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>🔄 Mantenibilidad</h3>
+                    <p>Código estandarizado es más fácil de mantener, actualizar y escalar.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>🚀 Rendimiento</h3>
+                    <p>Estándares optimizados mejoran la velocidad de carga y el rendimiento general.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>🔍 SEO</h3>
+                    <p>HTML semántico mejora el posicionamiento en motores de búsqueda.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>🔮 Futuro-compatible</h3>
+                    <p>Seguir estándares asegura compatibilidad con futuras tecnologías.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Barra lateral con recursos adicionales -->
+    <aside id="recursos" class="sidebar">
+        <h2>Recursos Adicionales</h2>
+        <div class="resource-box">
+            <h3>Documentación Oficial</h3>
+            <ul>
+                <li><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C Official</a></li>
+                <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+                <li><a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener">HTML Living Standard</a></li>
+            </ul>
+        </div>
+        <div class="resource-box">
+            <h3>Herramientas de Validación</h3>
+            <ul>
+                <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">HTML Validator</a></li>
+                <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">CSS Validator</a></li>
+                <li><a href="https://wave.webaim.org/" target="_blank" rel="noopener">WAVE Accessibility</a></li>
+            </ul>
+        </div>
+        <div class="resource-box">
+            <h3>Aprendizaje</h3>
+            <ul>
+                <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS-Tricks</a></li>
+                <li><a href="https://web.dev/" target="_blank" rel="noopener">web.dev</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Pie de página -->
+    <footer class="main-footer">
+        <p>
+            Taller desarrollado por estudiante de <strong>Ingeniería de Software</strong> | 
+            Aplicaciones Web | Diciembre 2025
+        </p>
+        <p class="footer-note">
+            Este proyecto implementa estándares W3C: HTML5 semántico y CSS Grid Layout
+        </p>
+    </footer>
+</body>
+</html>
