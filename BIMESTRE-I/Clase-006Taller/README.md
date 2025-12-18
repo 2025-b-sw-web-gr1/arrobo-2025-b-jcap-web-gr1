@@ -1,6 +1,6 @@
 # Taller Clase 006 - W3C (World Wide Web Consortium)
 
-**Estudiante:** Ingeniería de Sistemas  
+**Estudiante:** Ingeniería de Software  
 **Fecha:** Diciembre 2025  
 **Asignatura:** Aplicaciones Web
 
