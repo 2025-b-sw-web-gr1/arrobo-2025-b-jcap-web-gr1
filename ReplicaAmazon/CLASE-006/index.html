@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Replica Prime Style | CLASE-006</title>
+    <meta name="description" content="Replica de layout estilo Amazon Prime Video (solo UI)" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Tipografía opcional; si no carga, usa system-ui -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Header / Navbar -->
+      <header class="navbar">
+        <div class="nav-left">
+          <a href="#" class="brand">PrimeReplica</a>
+          <nav class="menu desktop-only">
+            <a href="#">Inicio</a>
+            <a href="#">Tienda</a>
+            <a href="#">Canales</a>
+            <a href="#">Categorías</a>
+            <a href="#">Series</a>
+            <a href="#">Películas</a>
+          </nav>
+        </div>
+        <div class="nav-right">
+          <form class="search desktop-only" role="search" aria-label="Buscar">
+            <input type="search" placeholder="Buscar" aria-label="Buscar contenido" />
+          </form>
+          <button class="icon-btn" aria-label="Cuenta">
+            <span class="icon">👤</span>
+          </button>
+          <button class="primary-btn desktop-only">Suscribirse</button>
+          <button class="ghost-btn desktop-only">Iniciar sesión</button>
+          <button class="hamburger mobile-only" aria-label="Abrir menú" title="Menú">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </header>
+
+      <main class="main">
+        <!-- Hero -->
+        <section class="hero">
+          <div class="hero-content">
+            <h1>Entretenimiento sin límites</h1>
+            <p>
+              Disfruta de miles de películas y series. Cancela cuando quieras. Contenido
+              para todos con una sola suscripción.
+            </p>
+            <div class="hero-actions">
+              <a href="#" class="primary-btn large">Comenzar prueba</a>
+              <a href="#" class="ghost-btn large">Más información</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Rows / Carruseles -->
+        <section class="row">
+          <h2 class="row-title">Tendencias</h2>
+          <div class="cards scroller">
+            <!-- 14-16 posters -->
+            
+            <article class="card"><img src="https://via.placeholder.com/320x180/1f2937/ffffff?text=Poster+1" alt="Poster" /><h3>Poster 1</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/111827/ffffff?text=Poster+2" alt="Poster" /><h3>Poster 2</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/0b1020/ffffff?text=Poster+3" alt="Poster" /><h3>Poster 3</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/0f172a/ffffff?text=Poster+4" alt="Poster" /><h3>Poster 4</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/172554/ffffff?text=Poster+5" alt="Poster" /><h3>Poster 5</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/1d4ed8/ffffff?text=Poster+6" alt="Poster" /><h3>Poster 6</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/0ea5e9/0b1020?text=Poster+7" alt="Poster" /><h3>Poster 7</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/06b6d4/0b1020?text=Poster+8" alt="Poster" /><h3>Poster 8</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/0891b2/ffffff?text=Poster+9" alt="Poster" /><h3>Poster 9</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/155e75/ffffff?text=Poster+10" alt="Poster" /><h3>Poster 10</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/134e4a/ffffff?text=Poster+11" alt="Poster" /><h3>Poster 11</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/166534/ffffff?text=Poster+12" alt="Poster" /><h3>Poster 12</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/052e16/ffffff?text=Poster+13" alt="Poster" /><h3>Poster 13</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/064e3b/ffffff?text=Poster+14" alt="Poster" /><h3>Poster 14</h3></article>
+          </div>
+        </section>
+
+        <section class="row">
+          <h2 class="row-title">Recomendado</h2>
+          <div class="cards scroller">
+            <article class="card"><img src="https://via.placeholder.com/320x180/1f2937/ffffff?text=Poster+A" alt="Poster" /><h3>Poster A</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/111827/ffffff?text=Poster+B" alt="Poster" /><h3>Poster B</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/0f172a/ffffff?text=Poster+C" alt="Poster" /><h3>Poster C</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/172554/ffffff?text=Poster+D" alt="Poster" /><h3>Poster D</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/1d4ed8/ffffff?text=Poster+E" alt="Poster" /><h3>Poster E</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/0ea5e9/0b1020?text=Poster+F" alt="Poster" /><h3>Poster F</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/06b6d4/0b1020?text=Poster+G" alt="Poster" /><h3>Poster G</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/0891b2/ffffff?text=Poster+H" alt="Poster" /><h3>Poster H</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/155e75/ffffff?text=Poster+I" alt="Poster" /><h3>Poster I</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/052e16/ffffff?text=Poster+J" alt="Poster" /><h3>Poster J</h3></article>
+          </div>
+        </section>
+
+        <section class="row">
+          <h2 class="row-title">Acción</h2>
+          <div class="cards scroller">
+            <article class="card"><img src="https://via.placeholder.com/320x180/2b2f33/ffffff?text=Accion+1" alt="Poster" /><h3>Acción 1</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/3a3f45/ffffff?text=Accion+2" alt="Poster" /><h3>Acción 2</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/4b5563/ffffff?text=Accion+3" alt="Poster" /><h3>Acción 3</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/9ca3af/0b1020?text=Accion+4" alt="Poster" /><h3>Acción 4</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/a1a1aa/0b1020?text=Accion+5" alt="Poster" /><h3>Acción 5</h3></article>
+            <article class="card"><img src="https://via.placeholder.com/320x180/b3b3b3/0b1020?text=Accion+6" alt="Poster" /><h3>Acción 6</h3></article>
+          </div>
+        </section>
+
+        <!-- Optional Grid: Top 10 -->
+        <section class="grid-section">
+          <h2 class="row-title">Top 10 de hoy</h2>
+          <div class="top-grid">
+            <!-- 10 ítems -->
+            <article class="grid-card">
+              <span class="badge">1</span>
+              <img src="https://via.placeholder.com/640x360/0b1020/ffffff?text=Top+1" alt="Top 1" />
+            </article>
+            <article class="grid-card"><span class="badge">2</span><img src="https://via.placeholder.com/640x360/111827/ffffff?text=Top+2" alt="Top 2" /></article>
+            <article class="grid-card"><span class="badge">3</span><img src="https://via.placeholder.com/640x360/172554/ffffff?text=Top+3" alt="Top 3" /></article>
+            <article class="grid-card"><span class="badge">4</span><img src="https://via.placeholder.com/640x360/1d4ed8/ffffff?text=Top+4" alt="Top 4" /></article>
+            <article class="grid-card"><span class="badge">5</span><img src="https://via.placeholder.com/640x360/0891b2/ffffff?text=Top+5" alt="Top 5" /></article>
+            <article class="grid-card"><span class="badge">6</span><img src="https://via.placeholder.com/640x360/06b6d4/0b1020?text=Top+6" alt="Top 6" /></article>
+            <article class="grid-card"><span class="badge">7</span><img src="https://via.placeholder.com/640x360/0ea5e9/0b1020?text=Top+7" alt="Top 7" /></article>
+            <article class="grid-card"><span class="badge">8</span><img src="https://via.placeholder.com/640x360/22d3ee/0b1020?text=Top+8" alt="Top 8" /></article>
+            <article class="grid-card"><span class="badge">9</span><img src="https://via.placeholder.com/640x360/67e8f9/0b1020?text=Top+9" alt="Top 9" /></article>
+            <article class="grid-card"><span class="badge">10</span><img src="https://via.placeholder.com/640x360/a5f3fc/0b1020?text=Top+10" alt="Top 10" /></article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-cols">
+          <div class="col">
+            <h4>Nosotros</h4>
+            <a href="#">Quiénes somos</a>
+            <a href="#">Prensa</a>
+            <a href="#">Empleo</a>
+          </div>
+          <div class="col">
+            <h4>Ayuda</h4>
+            <a href="#">Centro de ayuda</a>
+            <a href="#">Contáctanos</a>
+            <a href="#">Privacidad</a>
+          </div>
+          <div class="col">
+            <h4>Legal</h4>
+            <a href="#">Términos</a>
+            <a href="#">Cookies</a>
+            <a href="#">Preferencias</a>
+          </div>
+          <div class="col">
+            <h4>Suscripción</h4>
+            <a href="#">Planes</a>
+            <a href="#">Promociones</a>
+            <a href="#">Canales</a>
+          </div>
+        </div>
+        <p class="copy">Interfaz ficticia con fines educativos. Sin logos ni marcas reales.</p>
+      </footer>
+    </div>
+  </body>
+  </html>
